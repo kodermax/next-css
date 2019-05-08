@@ -1,6 +1,6 @@
 {
   "name": "@kodermax/next-css",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Import .css files in your Next.js project",
   "main": "index.js",
   "scripts": {

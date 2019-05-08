@@ -111,8 +111,8 @@ module.exports = (
   const extractCssLoader = {
     loader: ExtractCssChunks.loader,
     options: {
-      hot: true, // if you want HMR - we try to automatically inject hot reloading but if it's not working, add it to the config
-      reloadAll: true // when desperation kicks in - this is a brute force HMR flag
+      hot: dev, // if you want HMR - we try to automatically inject hot reloading but if it's not working, add it to the config
+      reloadAll: dev // when desperation kicks in - this is a brute force HMR flag
     }
   }
   return [
