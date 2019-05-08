@@ -42,7 +42,8 @@ module.exports = (
         chunkFilename: dev
           ? 'static/chunks/[name].chunk.css'
           : 'static/chunks/[name].[contenthash:8].chunk.css',
-        hot: dev
+        hot: dev,
+        reloadAll: dev
       })
     )
     extractCssInitialized = true
@@ -106,9 +107,15 @@ module.exports = (
   if (isServer && cssLoader.options.modules) {
     return [cssLoader, postcssLoader, ...loaders].filter(Boolean)
   }
-
+  const extractCssLoader = {
+    loader: ExtractCssChunks.loader,
+    options: {
+      hot: true, // if you want HMR - we try to automatically inject hot reloading but if it's not working, add it to the config
+      reloadAll: true // when desperation kicks in - this is a brute force HMR flag
+    }
+  }
   return [
-    !isServer && ExtractCssChunks.loader,
+    !isServer && extractCssLoader,
     cssLoader,
     postcssLoader,
     ...loaders
