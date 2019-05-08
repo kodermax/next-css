@@ -1,6 +1,6 @@
 {
   "name": "@kodermax/next-css",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "description": "Import .css files in your Next.js project",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/kodermax/next-css#readme",
   "dependencies": {
-    "css-loader": "^2.1.1",
+    "css-loader": "2.1.1",
     "extract-css-chunks-webpack-plugin": "^4.3.0",
     "extracted-loader": "^1.0.7",
     "find-up": "^3.0.0",
