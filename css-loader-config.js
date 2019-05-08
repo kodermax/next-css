@@ -43,7 +43,8 @@ module.exports = (
           ? 'static/chunks/[name].chunk.css'
           : 'static/chunks/[name].[contenthash:8].chunk.css',
         hot: dev,
-        reloadAll: dev
+        reloadAll: dev,
+        orderWarning: false
       })
     )
     extractCssInitialized = true
